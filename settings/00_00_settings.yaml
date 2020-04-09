@@ -126,10 +126,14 @@ fontspec: true
 # font families for use with XeLaTeX or LuaLaTeX take the name of any system
 # font, using the fontspec package. Note that if CJKmainfont is used, the xecjk
 # package must be available.
-mainfont: 'Libertinus Serif'
-sansfont: 'Libertinus Sans'
-monofont: 'Libertinus Mono'
-mathfont: 'Libertinus Math'
+#mainfont: 'Libertinus Serif'
+#sansfont: 'Libertinus Sans'
+#monofont: 'Libertinus Mono'
+#mathfont: 'Libertinus Math'
+mainfont: DejaVuSerif.ttf
+sansfont: DejaVuSans.ttf
+monofont: DejaVuSansMono.ttf 
+mathfont: texgyredejavu-math.otf 
 CJKmainfont:
 
 # options to use with mainfont, sansfont, monofont, mathfont, CJKmainfont in
@@ -187,7 +191,7 @@ notecolumnfontsize: '\footnotesize'
 # to mix onecolumn and twocolumn modes for example for wide equations.
 # usage: \begin{strip}...\end{strip}
 # default:
-cuted:
+#cuted:
 
 # for url-sensitive linebreaks (needed by XeLaTex)
 # default:
@@ -226,7 +230,7 @@ multirow:
 
 # to create (tabular cells spanning) multiple columns (load before pkg "bidi")
 # default:
-multicol:
+# multicol:
 
 # to create continuation headings and legends for floats
 # default:
@@ -312,7 +316,7 @@ draftwatermarkoptions:
 
 # to include the creative commons icons in my document
 # default:
-ccicons:
+#ccicons:
 
 # set pagestyle (needs pkg "scrlayer-scrpage")
 # default:
