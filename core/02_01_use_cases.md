@@ -1,14 +1,30 @@
 # FreeSurfer Use Cases
 
+Started:
+
+- Default Stream (`recon-all`)
+- Hippocampal and Amygdala Subfeild Segmentation
+- BrainStem Segmentation
+
+Still todo:
+
+- Longitudinal
+- FSFAST
+- PetSurfer
+
+
 ## Pre-Reqs
   - Install FreeSurfer
   - Configure FreeSurfer
 
-## `recon-all`
+## Default Stream (`recon-all`)
 
-Overview goes here.
+The default stream of FreeSurfer, called `recon-all` performs several functions, including:
 
-[More details](https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all)
+  - subcortical segmentation `aseg.mgz`
+  - ..
+
+More information can be found at \url{https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all}
 
 ### Inputs
 
@@ -17,8 +33,12 @@ Overview goes here.
 
 ### Major Outputs
 
-- `aseg.mgz`
-- ...
+Only major outputs are listed here.  More information on outputs can be found at \url{https://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllOutputFiles}
+
+- `aseg.mgz`: Labels subcortical structures
+- `?h.white`: 
+- `?h.pial`: 
+- `?h.thickness`
 
 ### Example
 
@@ -47,9 +67,44 @@ recon-all -all \
 
 ## Hippocampal Subfeild Segmentation
 
+Buildling off of the outputs of the default stream, 
 Overview goes here.
 
 [More details](https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala)
+
+### Inputs
+
+- Output of recon-all
+
+### Major Outputs
+
+In the `mri` subdirectory of the subject:
+- `?h.hippoSfVolumes-T1.v21.txt`: estimated volumes of the hippocampal substructures and of the whole hippocampus.
+- `?h.amygNucVolumes-T1.v21.txt`: estimated volumes of the nuclei of the amygdala and of the whole amygdala
+- `?h.hippoAmygLabels-T1.v21.mgz`: segmentation volumes at subvoxel resolution (0.333 mm)
+- `?h.hippoAmygLabels-T1.v21.FSvoxelSpace.mgz`: the discrete segmentation volume in the FreeSurfer voxel space (1mm isotropic).
+- `?h.hippoAmygLabels-T1.v21.[hierarchy].mgz`: Segmentations at various hierarchy levels.
+- `?h.hippoAmygLabels-T1.v21.[hierarchy].FSvoxelSpace.mgz`: Segmentations at various hierarchy levels, stored in FreeSurfer's voxel space
+
+### Example
+
+Begin by following the `recon-all` example to recon `sub-01` of studyforrest structural dataset.
+
+Run; T1w only:
+```
+segmentHA_T1.sh sub-01 
+```
+
+T1w + T2w:
+```
+segmentHA_T2.sh sub-01 $DATADIR/sub-01/anat/sub-01_T2w.nii.gz t2 1"
+```
+
+## Brainstem Substructure Segmentation
+
+Overview goes here.
+
+[More details](https://surfer.nmr.mgh.harvard.edu/fswiki/BrainstemSubstructures)
 
 ### Inputs
 
@@ -61,14 +116,9 @@ Overview goes here.
 
 ### Example
 
-- Follow along with `recon-all` example to recon `sub-01` of studyforrest structural dataset
+Begin by following the `recon-all` example to recon `sub-01` of studyforrest structural dataset.
 
-Run; T1w only:
+Run:
 ```
-segmentHA_T1.sh sub-01 
-```
-
-T1w + T2w:
-```
-segmentHA_T2.sh sub-01 $DATADIR/sub-01/anat/sub-01_T2w.nii.gz t2 1"
+segmentBS.sh sub-01 
 ```
