@@ -1,26 +1,26 @@
 ---
 doi: &doi
 
-title: &title 'Title'
+title: &title 'FreeSurfer'
 
-subtitle: &subtitle 'Long pretentious'
+subtitle: &subtitle 'A Users Guide'
 
 author: &author
-  - 'Author'
+  - ''
 
-web: &web http://www.example.org/ 
+web: &web https://github.com/pwighton/fs-text
 
-email: &email 'example@example.org'
+email: &email ''
 
-subject: &subject 'A research paper'
+subject: &subject ''
 
-year: &year '2019'
+year: &year '2020'
 
 date: &date '\today'
 
 submission_date: *date
 
-place: &place 'World'
+place: &place 'Charlestown, Massachusetts'
 
 aim:
   normal:
