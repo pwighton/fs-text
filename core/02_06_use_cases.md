@@ -79,6 +79,7 @@ Overview goes here.
 ### Major Outputs
 
 In the `mri` subdirectory of the subject:
+
 - `?h.hippoSfVolumes-T1.v21.txt`: estimated volumes of the hippocampal substructures and of the whole hippocampus.
 - `?h.amygNucVolumes-T1.v21.txt`: estimated volumes of the nuclei of the amygdala and of the whole amygdala
 - `?h.hippoAmygLabels-T1.v21.mgz`: segmentation volumes at subvoxel resolution (0.333 mm)
