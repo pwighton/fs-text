@@ -45,7 +45,7 @@ Things to consider when reading the papers:
 ### Tues June 9th, 1pm EST
 
 - Estimating Cortical Thickness
-  - [Fischl, Bruce, and Anders M. Dale. "Measuring the thickness of the human cerebral cortex from magnetic resonance images." Proceedings of the National Academy of Sciences 97.20 (2000): 11050-11055.](https://
+  - [Fischl, Bruce, and Anders M. Dale. "Measuring the thickness of the human cerebral cortex from magnetic resonance images." Proceedings of the National Academy of Sciences 97.20 (2000): 11050-11055.](https://surfer.nmr.mgh.harvard.edu/ftp/articles/fischl00-cortical-thickness.pdf)
 
 ### Tues June 16th, 1pm EST
 
